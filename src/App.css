@@ -1,5 +1,17 @@
+/* App.css */
+
+body {
+  background-color: black; /* make the whole page black */
+  color: white; /* white text so it’s readable */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
+  background-color: black; /* ensure App container stays black */
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,7 +26,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black; /* header stays black */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
