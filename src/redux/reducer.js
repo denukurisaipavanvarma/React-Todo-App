@@ -40,6 +40,10 @@ const addTodoReducer = createSlice({
         return todo;
       });
     },
+    //delete All Todos
+    deleteAllTodos:(state)=>
+    {return[] ;
+    }
   },
 });
 
@@ -48,5 +52,6 @@ export const {
   removeTodos,
   updateTodos,
   completeTodos,
+  deleteAllTodos
 } = addTodoReducer.actions;
 export const reducer = addTodoReducer.reducer;
