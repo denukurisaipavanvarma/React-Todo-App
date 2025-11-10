@@ -1,19 +1,54 @@
-/* App.css */
+/* 🌗 App.css — now supports light & dark themes */
 
+/* ------------------------------- */
+/* Default Theme Variables (Light) */
+/* ------------------------------- */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #222;
+  --card-bg: #e1ebfd;
+  --button-bg: #271c6c;
+  --button-text: #ffffff;
+  --accent-color: #61dafb;
+}
+
+/* ------------------------------- */
+/* Dark Theme Variables            */
+/* ------------------------------- */
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --card-bg: #1c1c1c;
+  --button-bg: #433aa8;
+  --button-text: #e1ebfd;
+  --accent-color: #9f8cff;
+}
+
+/* ------------------------------- */
+/* Global Styling                  */
+/* ------------------------------- */
 body {
-  background-color: black; /* make the whole page black */
-  color: white; /* white text so it’s readable */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "RocknRoll One", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ------------------------------- */
+/* App Container                   */
+/* ------------------------------- */
 .App {
   text-align: center;
-  background-color: black; /* ensure App container stays black */
+  background-color: var(--bg-color);
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ------------------------------- */
+/* Logo Animation (Optional)       */
+/* ------------------------------- */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -25,21 +60,49 @@ body {
   }
 }
 
+/* ------------------------------- */
+/* Header Section                  */
+/* ------------------------------- */
 .App-header {
-  background-color: black; /* header stays black */
+  background-color: var(--bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ------------------------------- */
+/* Links and Buttons               */
+/* ------------------------------- */
 .App-link {
-  color: #61dafb;
+  color: var(--accent-color);
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* ------------------------------- */
+/* Logo Spin Keyframes             */
+/* ------------------------------- */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
