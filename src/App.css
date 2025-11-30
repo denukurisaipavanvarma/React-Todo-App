@@ -1,50 +1,151 @@
-/* App.css */
-
+/* Global styles */
 body {
-  background-color: black; /* make the whole page black */
-  color: white; /* white text so it’s readable */
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .App {
   text-align: center;
-  background-color: black; /* ensure App container stays black */
   min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Todo App Title */
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #bfbfff;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: black; /* header stays black */
-  min-height: 100vh;
+/* Input & Add Button */
+.input-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #dfe6ff;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 28px;
+  border: none;
+  background-color: #2d1dab;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #4e37ff;
+}
+
+/* Search Box */
+.search-box {
+  margin-top: 20px;
+}
+
+.search-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: 2px solid #2d1dab;
+  background: transparent;
+  border-radius: 10px;
+  color: #d1ceff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Filter Buttons Section */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Button Colors */
+.active-btn {
+  background-color: #00b341;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.completed-btn {
+  background-color: #005eff;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.all-btn {
+  background-color: #151515;
+  color: white;
+}
+
+/* Delete All Button */
+.delete-all-btn {
+  background-color: #c03626;
+  padding: 9px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-all-btn:hover {
+  background-color: #ff4e36;
+}
+
+/* Todo Card */
+.todo-card {
+  width: 350px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #c2c8ff, #d4d0ff);
+  padding: 20px;
+  border-radius: 15px;
+  color: #0f0f84;
+  text-align: left;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions i {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.actions i:hover {
+  transform: scale(1.2);
 }
